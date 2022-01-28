@@ -1,21 +1,23 @@
 <template>
-<section>
-  <div id="app">
-    <transition name="fade">
-    <router-view></router-view>
-    </transition>
+  <div>
+    <the-navbar></the-navbar>
+    <div>
+      <transition name="fade">
+      <router-view></router-view>
+      </transition>
+    </div>
   </div>
-</section>
 </template>
 
 <script>
+import TheNavbar from "../components/TheNavbar.vue";
 
 export default {
-  name: "App",
+  name: "AppLayout",
   components: {
-
-},
-}
+    TheNavbar,
+  }
+};
 </script>
 
 <style>
