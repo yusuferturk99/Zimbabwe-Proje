@@ -53,6 +53,7 @@
         <router-link to="/login">Login</router-link> page.
       </p>
     </div>
+    <div>HENLOO</div>
   </div>
 </template>
 
