@@ -3,7 +3,7 @@ import App from './App.vue'
 import axios from 'axios'
 import VueRouter from 'vue-router'
 import Routes from './routes.js'
-import store from './store.js'
+import store from './store/index'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 axios.defaults.baseURL = 'https://vue-update.firebaseio.com'
@@ -48,7 +48,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: Routes,
   mode: 'history'
-}); 
+});
 
 Vue.config.productionTip = false
 

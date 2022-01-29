@@ -57,6 +57,9 @@
         class="d-flex justify-content-end mr-5"
       >
         <b-navbar-nav>
+            <b-nav-item>
+              <span style="color:white">{{Email}}</span>
+            </b-nav-item>
           <b-nav-item
             style="
               color: rgb(215, 215, 215);
@@ -125,6 +128,11 @@ export default {
 
     }
   },
+    computed:{
+      Email(){
+        return this.$store.getters['auth/email']
+      }
+    }
 };
 </script>
 

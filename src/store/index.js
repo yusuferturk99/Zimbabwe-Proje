@@ -1,5 +1,5 @@
-import Vue from 'Vue';
-import Vuex,{createStore} from 'Vuex';
+import Vue from 'vue';
+import Vuex from 'vuex';
 import auth from './auth';
 import projects from './projects';
 
@@ -16,13 +16,10 @@ export default new Vuex.Store({
     // async mutation-like
   },
   getters: {
-    // computed 
+    // computed
+  },
+  modules:{
+      auth,
+      projects,
   }
 })
-const store = createStore({
-    modules:{
-        auth,
-        projects,
-    }
-});
-export default store
