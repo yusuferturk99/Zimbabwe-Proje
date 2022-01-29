@@ -30,15 +30,15 @@
         <router-link to="/signup">Sign Up</router-link> page.
       </p>
       <p>
-        Would you like to 
+        Would you like to
         <router-link to="/passwordchange">change your password</router-link> ?
       </p>
       <p>
-        Forgot your 
+        Forgot your
         <router-link to="/forgotpassword">password</router-link> ? Send a code to your email and change your password from the section down below.
       </p>
       <p>
-        Here you can  
+        Here you can
         <router-link to="/forgotpasswordchange">change your password</router-link> via the code that has been sent to your email.
       </p>
     </div>
@@ -66,7 +66,11 @@ import axios from '../../src/axios-auth';
         }
         console.log(formData)
         axios.post('/Account/AdminLogin', formData)
-          .then(res => {console.log(res); this.formData = true;})
+          .then(res => {
+              //this.$store.commit('auth/token',response.)
+              console.log(res);
+              this.formData = true;
+          })
           .catch(error => console.log(error))
       },
       showPassword() {
